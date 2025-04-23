@@ -24,7 +24,7 @@ services:
       - userfiles:/var/www/html/userfiles
       - plugins:/var/www/html/app/Plugins
     ports:
-      - "${LEAN_PORT}:8080"
+      - "8080"
     depends_on:
       - leantime_db
 

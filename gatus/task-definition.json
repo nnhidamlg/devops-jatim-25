@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:827610363504:task-definition/lks-gatus-app:2",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:827610363504:task-definition/lks-gatus-app:latest",
   "containerDefinitions": [
       {
           "name": "gatus",

@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:827610363504:task-definition/lks-leantime-app:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:827610363504:task-definition/lks-leantime-app:latest",
   "containerDefinitions": [
       {
           "name": "leantime",
