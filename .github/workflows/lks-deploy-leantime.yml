@@ -5,14 +5,14 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION:
-  ECR_REPOSITORY:
-  ECS_CLUSTER:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: lks-gatus
+  ECS_CLUSTER: lks-oss-cluster
   TOKEN: ${{ secrets.TOKEN }}
 
-  ECS_LEANTIME_SERVICE:
-  LEANTIME_TASK_DEFINITION:
-  LEANTIME_URL: "??? ${{ secrets.ALB_ENDPOINT }} ???"
+  ECS_LEANTIME_SERVICE: leantime-service
+  LEANTIME_TASK_DEFINITION: ../../leantime/task-definition.json
+  LEANTIME_URL: "https://${{ secrets.ALB_ENDPOINT }}:80"
 # FILL THE MISSING VALUES ABOVE
 
 permissions:
