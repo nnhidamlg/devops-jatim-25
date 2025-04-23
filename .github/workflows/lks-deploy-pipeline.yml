@@ -91,18 +91,12 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:latest" >> $GITHUB_OUTPUT
           echo "IMAGE_FULL_URI=$ECR_REGISTRY/$ECR_REPOSITORY:latest" >> $GITHUB_ENV
-          
-      - name: Update ECS task definition
-        run: |
-          sed -i "s|<task-def-image>|$IMAGE_FULL_URI|g" $GATUS_TASK_DEFINITION
-          echo "Task definition updated."
-          cat $GATUS_TASK_DEFINITION
 
       - name: deploy ecs task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ env.GATUS_TASK_DEFINITION }}
-          service: ${{ env.ecs_gatus_service }}
-          cluster: ${{ env.ecs_cluster }}
+          service: ${{ env.ECS_GATUS_SERVICE }}
+          cluster: ${{ env.ECS_CLUSTER }}
           force-new-deployment: true
           run-task-tags: '[{"key": "", "value": ""} , ...]'
