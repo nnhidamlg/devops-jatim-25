@@ -1,6 +1,7 @@
 # FILL IN THE MISSING VALUES BELOW
 alerting:
   github:
+    repository-url: "https://github.com/nnhidamlg/devops-jatim-25"
     token: "<github-token>" # WARN: DO NOT CHANGE THIS LINE
 # FILL IN THE MISSING VALUES ABOVE
 
@@ -8,16 +9,22 @@ alerting:
 endpoints:
   - name: Leantime
     url: <leantime-url> # WARN: DO NOT CHANGE THIS LINE
-    interval:
+    interval: 5m
     conditions:
+      - "[STATUS] == 200"
+      - "[BODY].status == UP"
+      - "[RESPONSE_TIME] < 75"
     alerts:
       - type: github
         description: "Sensei, Leantime is down! Please check and fix it."
 
   - name: Gatus
     url: <gatus-url> # WARN: DO NOT CHANGE THIS LINE
-    interval:
+    interval: 5m
     conditions:
+      - "[STATUS] == 200"
+      - "[BODY].status == UP"
+      - "[RESPONSE_TIME] < 75"
     alerts:
       - type: github
         description: "Sensei, Gatus is down! Please check and fix it."
