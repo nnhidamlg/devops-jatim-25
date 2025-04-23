@@ -13,7 +13,7 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
 
   ECS_GATUS_SERVICE: gatus-service
-  GATUS_TASK_DEFINITION: ../../gatus/task-definition.json
+  GATUS_TASK_DEFINITION: /gatus/task-definition.json
   GATUS_URL: "https://${{ secrets.ALB_ENDPOINT }}:8080"
 # FILL THE MISSING VALUES ABOVE
 

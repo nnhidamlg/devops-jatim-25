@@ -13,7 +13,7 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
 
   ECS_LEANTIME_SERVICE: leantime-service
-  LEANTIME_TASK_DEFINITION: ../../leantime/task-definition.json
+  LEANTIME_TASK_DEFINITION: /leantime/task-definition.json
   LEANTIME_URL: "https://${{ secrets.ALB_ENDPOINT }}:80"
 # FILL THE MISSING VALUES ABOVE
 
