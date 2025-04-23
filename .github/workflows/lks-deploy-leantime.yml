@@ -1,8 +1,10 @@
-name: Example Job - Deploy Leantime
+name: Job - Deploy Leantime
 
 # FILL THE MISSING VALUES BELOW
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   AWS_REGION: us-east-1

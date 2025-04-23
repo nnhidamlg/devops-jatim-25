@@ -1,8 +1,10 @@
-name: Example Gatus' Job (1/2) - Build Gatus
+name: Gatus' Job (1/2) - Build Gatus
 
 # FILL THE MISSING VALUES BELOW
 on:
-  workflow_dispatch:
+  push:
+    branches:
+        - main
 
 env:
   AWS_REGION: us-east-1
