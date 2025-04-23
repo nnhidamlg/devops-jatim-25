@@ -21,7 +21,7 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  build:
     name: Deploy Gatus App
     runs-on: ubuntu-latest
     environment: dev
