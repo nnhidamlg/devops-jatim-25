@@ -101,7 +101,7 @@ jobs:
       - name: deploy ecs task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
-          task-definition: ${{ env.gatus_task_definition }}
+          task-definition: ${{ env.GATUS_TASK_DEFINITION }}
           service: ${{ env.ecs_gatus_service }}
           cluster: ${{ env.ecs_cluster }}
           force-new-deployment: true
